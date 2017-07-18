@@ -235,9 +235,9 @@ on_construct = function(pos)
 		meta:get_inventory():set_size("give4", 1)
 		meta:get_inventory():set_size("pay4", 1)
 	end,
-on_rightclick = function(pos, node, player, itemstack, pointed_thing)
-		smartshop.showform(pos,player)
-	end,
+--on_rightclick = function(pos, node, player, itemstack, pointed_thing)
+--		smartshop.showform(pos,player)
+--	end,
 allow_metadata_inventory_put = function(pos, listname, index, stack, player)
 		if minetest.get_meta(pos):get_string("owner")==player:get_player_name() then
 		return stack:get_count()
